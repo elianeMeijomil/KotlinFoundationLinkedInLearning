@@ -1,4 +1,4 @@
-package NullSafety
+package nullsafety
 
 fun main(){
     var name: String? = "Eliane Meijomil"
