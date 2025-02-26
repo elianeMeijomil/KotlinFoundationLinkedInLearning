@@ -46,10 +46,16 @@ fun listContacts(contacts: List<Map<String,String>>) {
     if (contacts.isEmpty()) {
         println("Nenhum contato cadastrado")
     }
-
-    for (contact in contacts){
-        println(contact.keys)
-        println("[] Nome: ${contact["name"]} | Telefone: ${contact["phonenumber"]}")
+    try {
+        for (contact in contacts) {
+            for (key in contact.keys) {
+                print("$key: "+contact[key]+" |")
+            }
+        println()
+        //println("[] Nome: ${contact["name"]} | Telefone: ${contact["phonenumber"]}")
+        }
+    } catch (e:Exception){
+        println("Deu ruin!")
     }
 }
 fun deleteContact() {}
